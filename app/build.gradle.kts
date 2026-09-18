@@ -36,8 +36,8 @@ android {
 }
 
 dependencies {
-    implementation("io.coil - composer:2:7.0.1")
-    implementation("")
+//    implementation("io.coil - composer:2:7.0.0")
+//    implementation("com.google.code.gson.gson:2.14.0")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
