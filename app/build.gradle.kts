@@ -36,14 +36,15 @@ android {
 }
 
 dependencies {
-//    implementation("io.coil - composer:2:7.0.0")
-//    implementation("com.google.code.gson.gson:2.14.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("io.coil-kt:coil-compose:2.7.0")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.ui.unit)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
