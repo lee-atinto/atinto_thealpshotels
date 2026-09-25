@@ -1,5 +1,6 @@
 package ph.edu.comteq.atinto_thealpshotels
 
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,8 +18,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Card
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -40,6 +43,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.google.gson.Gson
 import ph.edu.comteq.atinto_thealpshotels.ui.theme.Atinto_thealpshotelsTheme
 
@@ -114,6 +119,11 @@ fun Homepage(name: String, modifier: Modifier = Modifier) {
                 contentDescription = "User Icon",
                 modifier = Modifier.size(24.dp)
             )
+//            Icon(
+//                imageVector = Icons.outlined.Person,
+//                contentDescription = "User Icon",
+//                modifier = Modifier.size.(32.dp)
+//            )
         }
 
         HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
@@ -141,6 +151,39 @@ fun Homepage(name: String, modifier: Modifier = Modifier) {
         }
     }
 }
+
+//@Composable
+//fun HotelCard(hotel: Hotel) {
+//    Card {
+//        Row {
+//            AsyncImage(
+//                model = ImageRequest.Builder(LocalContext.current)
+//                    .data("file:///android_asset/${hotel.hotel_cover_img}")
+//                    .build(),
+//                contentDescription = hotel.hotel_name
+//            )
+//
+//            Column {
+//                Text(
+//                    text = hotel.hotel_name,
+//                    fontSize = 8.sp,
+//                    fontWeight = FontWeight.Bold
+//                )
+//
+//                Row {
+//                    repeat(hotel.hotel_rating.toInt()) {
+//                        Icon(
+//                            imageVector = Icons.Filled.Star,
+//                            contentDescription = "Star Icon",
+//                            modifier = Modifier.size(23.dp),
+//                            tint = colorValue
+//                        )
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 @Composable
 fun HotelCard(
